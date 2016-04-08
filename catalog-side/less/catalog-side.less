@@ -1,0 +1,127 @@
+@import (reference) "../../_assets/less/base.less";
+
+
+.yc-side-catalog {
+	line-height: 25px;
+	.pl(5px);
+	.fs(14px);
+	.ff("宋体"); 
+	.pv;
+	.hide{
+		.hide;
+	}
+	.icon-point {
+		width: 10px;
+		height: 10px;
+		.inline-block;
+		.bgimg("../images/side-catalog.gif", 0 -222px);
+		.poi;
+		.pv;
+		z-index: 3;
+	}
+	.a-catalog {
+		color: #666;
+		.p(4px 5px);
+	}
+	.dt-catalog-root:hover, .dd-catalog-child:hover, .cat-hover {
+		.a-catalog {
+			.bgcolor(#ECECEC);
+			color: #1D7DB2;
+
+			.st-cat {
+				color: #1D7DB2;
+			}
+		}
+		.icon-point {
+			.bgimg("../images/side-catalog.gif", 0 -245px);
+		}
+	}
+	.st-cat {
+		.fs(12px);
+		color: #999999;
+		.fs(14px);
+	}
+	.dd-catalog-child {
+		height: 26px;
+		.a-catalog {
+			.ml(35px);
+		}
+	}
+	.dt-catalog-root {
+		height: 26px; 
+		.fs(15px); 
+	}
+	.yc-catalog-show {
+		.pv;
+		height: 334px;
+		.ovh;
+	}
+	.d-catalog-content {
+		.pv;
+	}
+	.d-index-axis {
+		width: 2px;
+		height: 100%;
+		.bgcolor(#D1D1D1);
+		left: 7px;
+		top: 0;
+		.pa;
+	}
+	.sp-index {
+		.bgimg("../images/side-catalog.gif", -273px -37px);
+		width: 22px;
+		height: 16px;
+		.pa;
+		left: -6px;
+		top: 6px;
+		z-index: 4;
+		.trans;
+	}
+	.icon-toggle-catalog {
+		width: 45px;
+		height: 45px;
+		display: block;
+		.bgimg("../images/side-catalog.gif", 0px 0px);
+		.mt(15px);
+		.poi;
+	}
+	.icon-toggle-catalog:hover {
+		.bgimg("../images/side-catalog.gif", -104px 0px);
+	}
+	.icon-scroll-top {
+		.mt(7px);
+		width: 45px;
+		height: 45px;
+		display: block;
+		.bgimg("../images/side-catalog.gif", 0px -63px);
+		.poi;
+	}
+	.icon-scroll-top:hover {
+		.bgimg("../images/side-catalog.gif", -73px -63px);
+	}
+	.icon-circle-top {
+		top: -9px;
+	}
+	.icon-circle-bottom {
+		top: 330px;
+	}
+	.icon-circle-top, .icon-circle-bottom {
+		.bgimg("../images/side-catalog.gif", 0px -198px);
+		width: 11px;
+		height: 11px;
+		.pa;
+		left: 8px;
+
+		&:hover {
+			.bgimg("../images/side-catalog.gif", 0px -184px);
+		}
+	}
+	.dl-catalog {
+		.pl(5px);
+		.m(0);
+		white-space: nowrap;
+	}
+	.d-catalog-content{
+		.trans;
+	}
+}

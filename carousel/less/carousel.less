@@ -1,0 +1,57 @@
+@import (reference) "../../_assets/less/base.less";
+
+/**
+ * carousel style
+ */
+@carWidth: 1006px;
+@carHeight: 240px;
+
+.grp_carousel_box {
+	width: @carWidth;
+	height: @carHeight;
+	overflow: hidden;
+	position: relative;
+	margin: 0 auto;
+	_text-align: center;
+}
+.grp_carousel_imgcoll {
+	transition: margin .5s ease-in .1s;
+	.m(0);
+	.bfc;
+}
+.grp_carousel_img {
+	.fl;
+	.m(0);
+	img {
+		width: @carWidth;
+		height: @carHeight;
+	}
+}
+.grp_carousel_page {
+	position: absolute;
+	top: 100px;
+	background-color: orange;
+	cursor: pointer;
+	display: none;
+}
+.grp_carousel_next {
+	right: 0px;
+}
+.grp_carousel_index {
+	position: absolute;
+	top: 210px;
+	left: 45%;
+}
+.grp_carousel_link {
+	.inline-block;
+	width: 14px;
+	height: 12px;
+	border-radius: 50%;
+	.bgimg("../images/pointerB.png", center center);
+	.ie6filter("images/pointerB.png");
+	*margin-right: 5px;
+}
+.active.grp_carousel_link {
+	.bgimgs("../images/pointerA.png", center center);
+	.ie6filter("images/pointerA.png");
+}

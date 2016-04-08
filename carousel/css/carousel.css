@@ -1,0 +1,63 @@
+/**
+ * carousel style
+ */
+.grp_carousel_box {
+  width: 1006px;
+  height: 240px;
+  overflow: hidden;
+  position: relative;
+  margin: 0 auto;
+  _text-align: center;
+}
+.grp_carousel_imgcoll {
+  -webkit-transition: margin 0.5s ease-in 0.1s;
+          transition: margin 0.5s ease-in 0.1s;
+  margin: 0;
+  overflow: hidden;
+  *zoom: 1;
+}
+.grp_carousel_img {
+  float: left;
+  margin: 0;
+}
+.grp_carousel_img img {
+  width: 1006px;
+  height: 240px;
+}
+.grp_carousel_page {
+  position: absolute;
+  top: 100px;
+  background-color: orange;
+  cursor: pointer;
+  display: none;
+}
+.grp_carousel_next {
+  right: 0px;
+}
+.grp_carousel_index {
+  position: absolute;
+  top: 210px;
+  left: 45%;
+}
+.grp_carousel_link {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  width: 14px;
+  height: 12px;
+  border-radius: 50%;
+  background-image: url("../images/pointerB.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  _background: none;
+  _filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="images/pointerB.png", sizingMethod='crop');
+  *margin-right: 5px;
+}
+.active.grp_carousel_link {
+  background-image: url("../images/pointerA.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+  _background: none;
+  _filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="images/pointerA.png", sizingMethod='crop');
+}

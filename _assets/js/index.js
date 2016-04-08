@@ -1,0 +1,64 @@
+var data = [{
+	"uid": "address-link",
+	"title": "地址联想"
+}, {
+	"uid": "carousel",
+	"title": "轮播"
+}, {
+	"uid": "catalog-side",
+	"title": "文档目录"
+}, {
+	"uid": "click-slide",
+	"title": "点击轮播"
+}, {
+	"uid": "collapse",
+	"title": "折叠页"
+}, {
+	"uid": "context-input",
+	"title": "输入关联"
+}, {
+	"uid": "datepicker",
+	"title": "日期选择器"
+}, {
+	"uid": "droplist",
+	"title": "下拉链接"
+}, {
+	"uid": "hoverdelay",
+	"title": "hover延时"
+}, {
+	"uid": "iframe-board",
+	"title": "基于iframe控制台"
+}, {
+	"uid": "lazyload",
+	"title": "懒加载"
+}, {
+	"uid": "popup",
+	"title": "弹出框"
+}, {
+	"uid": "scroll-emulate",
+	"title": "模拟滚动条"
+}, {
+	"uid": "search",
+	"title": "搜索"
+}, {
+	"uid": "select-radio",
+	"title": "重写select组件"
+}, {
+	"uid": "sitemap",
+	"title": "树形组件"
+}, {
+	"uid": "slidebar",
+	"title": "拖动条"
+}, {
+	"uid": "tab",
+	"title": "tab分页"
+}, {
+	"uid": "table",
+	"title": "表格组件"
+}, {
+	"uid": "timeAxis",
+	"title": "时间轴"
+}, {
+	"uid": "tipbox",
+	"title": "提示框"
+}];

@@ -1,0 +1,135 @@
+.address-link {
+  margin: 50px;
+  font-size: 13px;
+  width: 300px;
+  position: relative;
+}
+.address-link .hide {
+  display: none;
+}
+.address-link .adr-input-area {
+  line-height: 30px;
+  border: 1px solid #cccccc;
+  cursor: pointer;
+  position: relative;
+}
+.address-link .icon-dw {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-width: 5px;
+  border-style: solid dashed dotted dashed;
+  border-color: #cccccc transparent transparent transparent;
+  vertical-align: middle;
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  top: 12px;
+  right: 10px;
+  border-width: 7px;
+}
+.address-link .icon-mask {
+  width: 0;
+  height: 0;
+  border-width: 5px;
+  border-style: solid dashed dotted dashed;
+  border-color: #ffffff transparent transparent transparent;
+  vertical-align: middle;
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  border-width: 6px;
+  position: absolute;
+  top: 10px;
+  right: 11px;
+}
+.address-link .adr-select-area {
+  position: absolute;
+  width: 100%;
+  top: 32px;
+  left: 0;
+  background-color: #ffffff;
+  z-index: 1;
+}
+.address-link .adr-text-area:hover {
+  outline: 2px solid #A5C7FE;
+}
+.address-link .adr-text-area {
+  padding-left: 5px;
+  height: 30px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.address-link .ul-tabs-bd {
+  line-height: 26px;
+}
+.address-link .ul-tabs-tt {
+  line-height: 35px;
+  overflow: hidden;
+  *zoom: 1;
+  border-right: 1px solid #cccccc;
+}
+.address-link .li-tab-tt {
+  float: left;
+  width: 33%;
+  *width: 98.33333333px;
+  text-align: center;
+  background-color: #f0f0f0;
+  border-left: 1px solid #cccccc;
+  cursor: pointer;
+  border-bottom: 1px solid #cccccc;
+}
+.address-link ul,
+.address-link li {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.address-link .ul-tabs-tt .active {
+  background-color: #ffffff;
+  border-bottom: none;
+}
+.address-link .ul-tabs-bd .active {
+  display: block;
+}
+.address-link .li-tab-bd {
+  border-left: 1px solid #cccccc;
+  border-bottom: 1px solid #cccccc;
+  border-right: 1px solid #cccccc;
+  display: none;
+  overflow: hidden;
+  *zoom: 1;
+}
+.address-link .li-tab-bd .checked {
+  background-color: #ff6600;
+  color: #ffffff;
+}
+.address-link .dl-adr {
+  overflow: hidden;
+  *zoom: 1;
+  padding: 10px;
+}
+.address-link .dt-adr {
+  float: left;
+  width: 50px;
+  text-align: center;
+  font-family: 'Microsoft Yahei';
+}
+.address-link .dd-adr {
+  overflow: hidden;
+  *zoom: 1;
+}
+.address-link .adr-itm {
+  float: left;
+  display: block;
+  padding: 0px 6px;
+  cursor: pointer;
+  overflow: hidden;
+  *zoom: 1;
+}
+.address-link .adr-itms {
+  overflow: hidden;
+  *zoom: 1;
+  padding: 10px;
+}
