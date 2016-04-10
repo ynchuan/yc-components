@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>仿百度百科目录</title>
+        <title>百科目录</title>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-        <link rel="stylesheet" href="../_assets/css/demo.css"> 
+        <link rel="stylesheet" href="../_assets/css/demo.css">
         <script type="text/javascript" src="../_assets/js/jquery-1.7.2.min.js"></script>
         <link rel="stylesheet" type="text/css" href="css/catalog-side.css">
         <script src="js/catalog-side.js"></script>
@@ -14,249 +14,249 @@
         <script src="js/json2.js"></script>
         <![endif]-->
         <style>
-        .wrap{
-            width: 900px;
-            margin:0 auto;
+        .container{
+            width: 800px; 
         }
         .div-content {
-            min-height:50px;
-            border:1px solid #ccc;
+        min-height:50px;
+        border:1px solid #ccc;
         }
         .div-h3-detail{
-            height: 50px;
-            background-color: palevioletred;
-            
+        height: 50px;
+        background-color: palevioletred;
+        
         }
         .h3-tl{
-            font-size:16px;
-            padding-left:10px;
+        font-size:16px;
+        padding-left:10px;
         }
         .h2-tl{
-            padding-top:20px;
-            padding-bottom:5px;
-            margin:0;
+        padding-top:20px;
+        padding-bottom:5px;
+        margin:0;
         }
-        .d-left-nav{
+        .d-catalog{
             transition: all 0.3s;
             position: fixed;
             top: 150px;
             right:10px;
         }
         </style>
-        <script>  
+        <script>
         $(function(){
-            var scrollbar = $(".d-left-nav"),
+            var scrollbar = $(".d-catalog"),
             $doc = $(document);
             scrollbar.catalogBar().addClass("hide"); //初始化目录页面，该插件依赖.h2-tl|.h3-tl DOM结构
             $(window).on("scroll", function() {
-                    if ($(".h2-tl").offset().top < $doc.scrollTop()) {
-                        scrollbar.removeClass("hide");
-                    } else {
-                        scrollbar.addClass("hide");
-                    }
-                });
-            });  
+            if ($(".h2-tl").offset().top < $doc.scrollTop()) {
+            scrollbar.removeClass("hide");
+            } else {
+            scrollbar.addClass("hide");
+            }
+            });
+        });
         </script>
     </head>
     <body>
-        <div class="main-flow">
-            <section class="sec-subject">
-                <div class="wrap">
-                    <div class="wrap-left">
-                        <article class="article" >
-                            <h2 class="h2-tl">
-                            概况
-                            </h2>
-                            <div class="div-content">
-                                
-                            </div>
-                        </article>
-                        <article class="article" >
-                            <h2 class="h2-tl">
-                            详细1
-                            </h2>
-                            <div class="div-content">
-                                
-                            </div>
-                        </article>
-                        <article class="article" >
-                            <h2 class="h2-tl">
-                            详细2
-                            </h2>
-                            <div class="div-content">
-                                
-                            </div>
-                        </article>
-                        <article class="article">
-                            <h2 class="h2-tl">
-                            详细3
-                            </h2>
-                            <div class="div-content">
-                                
-                            </div>
-                        </article>
-                        <article class="article" >
-                            <h2 class="h2-tl">
-                            详细4
-                            </h2>
-                            <div class="div-content">
-                                
-                            </div>
-                        </article>
-                        <article class="article" >
-                            <h2 class="h2-tl">
-                            详细5
-                            </h2>
-                            <div class="div-content">
-                                <h3 class="h3-tl">
-                                子详细1
-                                </h3>
-                                <div class="div-h3-detail">
-                                    
-                                </div>
-                                <h3 class="h3-tl">
-                                子详细2
-                                </h3>
-                                <div class="div-h3-detail"></div>
-                                <h3 class="h3-tl">
-                                子详细3
-                                </h3>
-                                <div class="div-h3-detail"></div>
-                                <h3 class="h3-tl">
-                                子详细4
-                                </h3>
-                                <div class="div-h3-detail">
-                                    
-                                </div>
-                            </div>
-                        </article>
-                        <article class="article" >
-                            <h2 class="h2-tl">
-                            详细6
-                            </h2>
-                            <div class="div-content">
-                                <h3 class="h3-tl">
-                                子详细6-1
-                                </h3>
-                                <div class="div-h3-detail">
-                                    
-                                </div>
-                                <h3 class="h3-tl">
-                                子详细6-2
-                                </h3>
-                                <div class="div-h3-detail">
-                                    
-                                </div>
-                                <h3 class="h3-tl">
-                                子详细6-3
-                                </h3>
-                                <div class="div-h3-detail"></div>
-                                <h3 class="h3-tl">
-                                子详细6-4
-                                </h3>
-                                <div class="div-h3-detail"></div>
-                            </div>
-                        </article>
-                        <article class="article" >
-                            <h2 class="h2-tl">
-                            详细7
-                            </h2>
-                            <div class="div-content">
-                                <h3 class="h3-tl">
-                                子详细7-1
-                                </h3>
-                                <div class="div-h3-detail">
-                                    
-                                </div>
-                                <h3 class="h3-tl">
-                                子详细7-2
-                                </h3>
-                                <div class="div-h3-detail">
-                                    
-                                </div>
-                                <h3 class="h3-tl">
-                                子详细7-3
-                                </h3>
-                                <div class="div-h3-detail"></div>
-                            </div>
-                        </article>
-                        <article class="article" >
-                            <h2 class="h2-tl">
-                            详细8
-                            </h2>
-                            <div class="div-content">
-                                <h3 class="h3-tl">
-                                子详细8-1
-                                </h3>
-                                <div class="div-h3-detail">
-                                    
-                                </div>
-                                <h3 class="h3-tl">
-                                子详细8-2
-                                </h3>
-                                <div class="div-h3-detail"></div>
-                                <h3 class="h3-tl">
-                                子详细8-3
-                                </h3>
-                                <div class="div-h3-detail"></div>
-                            </div>
-                        </article>
-                        <article class="article" >
-                            <h2 class="h2-tl">
-                            详细9
-                            </h2>
-                            <div class="div-content">
-                                <h3 class="h3-tl">
-                                子详细9-1
-                                </h3>
-                                <div class="div-h3-detail">
-                                    
-                                </div>
-                                <h3 class="h3-tl">
-                                子详细9-2
-                                </h3>
-                                <div class="div-h3-detail"></div>
-                                <h3 class="h3-tl">
-                                子详细9-3
-                                </h3>
-                                <div class="div-h3-detail"></div>
-                                <h3 class="h3-tl">
-                                子详细9-4
-                                </h3>
-                                <div class="div-h3-detail"></div>
-                            </div>
-                        </article>
-                        <article class="article" >
-                            <h2 class="h2-tl">
-                            详细10
-                            </h2>
-                            <div class="div-content">
-                                <h3 class="h3-tl">
-                                子详细10-1
-                                </h3>
-                                <div class="div-h3-detail">
-                                    
-                                </div>
-                                <h3 class="h3-tl">
-                                子详细10-2
-                                </h3>
-                                <div class="div-h3-detail"></div>
-                            </div>
-                        </article>
-                        <article class="article" >
-                            <h2 class="h2-tl">
-                            详细11
-                            </h2>
-                            <div class="div-content">
-                                
-                            </div>
-                        </article>
-                    </div>
-                    <div class="d-left-nav">
+        <h2 class="h2-dm">百科目录</h2>
+        <div class="div-show">
+            <div class="container">
+                <article class="article" >
+                    <h2 class="h2-tl">
+                    概况
+                    </h2>
+                    <div class="div-content">
                         
                     </div>
-                </div>
-            </section>
+                </article>
+                <article class="article" >
+                    <h2 class="h2-tl">
+                    详细1
+                    </h2>
+                    <div class="div-content">
+                        
+                    </div>
+                </article>
+                <article class="article" >
+                    <h2 class="h2-tl">
+                    详细2
+                    </h2>
+                    <div class="div-content">
+                        
+                    </div>
+                </article>
+                <article class="article">
+                    <h2 class="h2-tl">
+                    详细3
+                    </h2>
+                    <div class="div-content">
+                        
+                    </div>
+                </article>
+                <article class="article" >
+                    <h2 class="h2-tl">
+                    详细4
+                    </h2>
+                    <div class="div-content">
+                        
+                    </div>
+                </article>
+                <article class="article" >
+                    <h2 class="h2-tl">
+                    详细5
+                    </h2>
+                    <div class="div-content">
+                        <h3 class="h3-tl">
+                        子详细1
+                        </h3>
+                        <div class="div-h3-detail">
+                            
+                        </div>
+                        <h3 class="h3-tl">
+                        子详细2
+                        </h3>
+                        <div class="div-h3-detail"></div>
+                        <h3 class="h3-tl">
+                        子详细3
+                        </h3>
+                        <div class="div-h3-detail"></div>
+                        <h3 class="h3-tl">
+                        子详细4
+                        </h3>
+                        <div class="div-h3-detail">
+                            
+                        </div>
+                    </div>
+                </article>
+                <article class="article" >
+                    <h2 class="h2-tl">
+                    详细6
+                    </h2>
+                    <div class="div-content">
+                        <h3 class="h3-tl">
+                        子详细6-1
+                        </h3>
+                        <div class="div-h3-detail">
+                            
+                        </div>
+                        <h3 class="h3-tl">
+                        子详细6-2
+                        </h3>
+                        <div class="div-h3-detail">
+                            
+                        </div>
+                        <h3 class="h3-tl">
+                        子详细6-3
+                        </h3>
+                        <div class="div-h3-detail"></div>
+                        <h3 class="h3-tl">
+                        子详细6-4
+                        </h3>
+                        <div class="div-h3-detail"></div>
+                    </div>
+                </article>
+                <article class="article" >
+                    <h2 class="h2-tl">
+                    详细7
+                    </h2>
+                    <div class="div-content">
+                        <h3 class="h3-tl">
+                        子详细7-1
+                        </h3>
+                        <div class="div-h3-detail">
+                            
+                        </div>
+                        <h3 class="h3-tl">
+                        子详细7-2
+                        </h3>
+                        <div class="div-h3-detail">
+                            
+                        </div>
+                        <h3 class="h3-tl">
+                        子详细7-3
+                        </h3>
+                        <div class="div-h3-detail"></div>
+                    </div>
+                </article>
+                <article class="article" >
+                    <h2 class="h2-tl">
+                    详细8
+                    </h2>
+                    <div class="div-content">
+                        <h3 class="h3-tl">
+                        子详细8-1
+                        </h3>
+                        <div class="div-h3-detail">
+                            
+                        </div>
+                        <h3 class="h3-tl">
+                        子详细8-2
+                        </h3>
+                        <div class="div-h3-detail"></div>
+                        <h3 class="h3-tl">
+                        子详细8-3
+                        </h3>
+                        <div class="div-h3-detail"></div>
+                    </div>
+                </article>
+                <article class="article" >
+                    <h2 class="h2-tl">
+                    详细9
+                    </h2>
+                    <div class="div-content">
+                        <h3 class="h3-tl">
+                        子详细9-1
+                        </h3>
+                        <div class="div-h3-detail">
+                            
+                        </div>
+                        <h3 class="h3-tl">
+                        子详细9-2
+                        </h3>
+                        <div class="div-h3-detail"></div>
+                        <h3 class="h3-tl">
+                        子详细9-3
+                        </h3>
+                        <div class="div-h3-detail"></div>
+                        <h3 class="h3-tl">
+                        子详细9-4
+                        </h3>
+                        <div class="div-h3-detail"></div>
+                    </div>
+                </article>
+                <article class="article" >
+                    <h2 class="h2-tl">
+                    详细10
+                    </h2>
+                    <div class="div-content">
+                        <h3 class="h3-tl">
+                        子详细10-1
+                        </h3>
+                        <div class="div-h3-detail">
+                            
+                        </div>
+                        <h3 class="h3-tl">
+                        子详细10-2
+                        </h3>
+                        <div class="div-h3-detail"></div>
+                    </div>
+                </article>
+                <article class="article" >
+                    <h2 class="h2-tl">
+                    详细11
+                    </h2>
+                    <div class="div-content">
+                        
+                    </div>
+                </article>
+            </div>
+            <div class="d-catalog"></div>
+        </div>
+        <div class="div-desc">
+            
+        </div>
+        <div class="d-code">
+            
         </div>
     </body>
 </html>

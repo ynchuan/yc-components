@@ -9,7 +9,7 @@ var data = [{
 		"title": "轮播"
 	}, {
 		"uid": "catalog-side",
-		"title": "文库目录"
+		"title": "百科目录"
 	}, {
 		"uid": "click-slide",
 		"title": "点击轮播"
@@ -63,11 +63,13 @@ var data = [{
 
 $(function() {
 	$iframe=$("#iframe");
+	$linkSrc=$("#link-src");
 	$(".aside-collapse").collapse({
 		"data": data,
 		"isHidePre": true,
 		clickEvent: function(event, data) {
 			var uid = $(this).data("uid");
+			$linkSrc.removeClass('hide').attr("href","src/"+uid); 
 			$iframe.attr("src", "src/" +uid+"/"+ uid + ".html?v="+(+new Date));
 			iframe.onload = function() {
 				//iframe页面加载后执行onload方法
