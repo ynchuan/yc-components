@@ -1,6 +1,6 @@
 ;
 (function($) {
-	$.fn.grpcollapse = function(options) {
+	$.fn.collapse = function(options) {
 		if (typeof options == "object") {
 			var opts = $.extend({
 				"isHidePre": true,

@@ -1,6 +1,6 @@
 ;
 (function($) {
-	$.fn.grpcollapse = function(options) {
+	$.fn.collapse = function(options) {
 		if (typeof options == "object") {
 			var opts = $.extend({
 				"isHidePre": true
@@ -33,7 +33,7 @@
 			var domStr = "";
 			for (var i = 0; i < data.length; i++) {
 				var dataObj = data[i]; 
-				var mark1 = "",
+				var mark1 = "li-parent",
 					mark2 = "";
 				if (n == 1) {
 					mark2 = "icon-right"

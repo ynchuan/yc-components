@@ -120,13 +120,13 @@
         }]
         }];
         //使用菜单导航数据初始化右侧菜单
-        $(".div-collapse-v2").grpcollapse({
+        $(".div-collapse-v2").collapse({
         "data": data,
         "isHidePre": true,
         clickEvent: function(event, data) {
         console.log("点击item的uid为：" + $(this).data("uid")); //当点击折叠页内部的item时候会触发该方法
         }
-        }).grpcollapse("mag-dispatch"); //该方法初始化选中noti-read的item
+        }).collapse("mag-dispatch"); //该方法初始化选中noti-read的item
         });
         </script>
     </head>

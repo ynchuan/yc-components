@@ -1,0 +1,68 @@
+@import (reference) "../../_assets/less/base.less";
+/**
+ *collapse style
+ */
+.grp_collpase_ul {
+	.grp_collpase_li {
+		font-size: 0px;
+		_margin-top: -2px;
+
+		.grp_collpase_item {
+			line-height: 46px;
+			width: 100%;
+			font-size: 18px;
+			border-bottom: 1px solid #EAEAEA;
+
+			.grp_collpase_icon {
+				.inline-block;
+				width: 28px;
+				height: 28px;
+				vertical-align: -6px;
+				background-size: cover;
+				background-repeat: no-repeat;
+				background-position: center;
+			}
+			.grp_collpase_txt {
+				.inline-block;
+				width: 53%;
+				text-align: left;
+			}
+			.grp_collpase_span {
+				.inline-block;
+				width: 20%;
+				text-align: center;
+				*vertical-align: middle;
+			}
+		}
+		.grp_collapse_right {
+			background-image: url(../images/icon/arrow-right.png);
+			_background: none;
+			.ie6filter("./images/arrow-right.png")
+		}
+		.grp_collapse_down {
+			background-image: url(../images/icon/arrow-down.png);
+			_background: none;
+			.ie6filter("./images/arrow-right.png")
+		}
+		.active {
+			background-color: #0092DD;
+			color: #D8EEFA;
+		}
+	}
+	.active {
+		.grp_collpase_item {
+			background-color: #F2F3F5;
+			color: #0092DD;
+		}
+		.grp_collapse_right {
+			background-image: url(../images/icon/arrow-right-active.png);
+			_background: none;
+			.ie6filter("./images/arrow-right-active.png");
+		}
+		.grp_collapse_down {
+			background-image: url(../images/icon/arrow-down-active.png);
+			_background: none;
+			.ie6filter("./images/arrow-down-active.png");
+		}
+	}
+}

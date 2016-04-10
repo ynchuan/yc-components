@@ -348,6 +348,30 @@
 }
 .wrap {
 	.mw;
-	.center;
-	margin-left: calc(~"100% - 100vw");
+	.center; 
+}
+
+/**
+ * 原始样式补偿
+ */
+
+body {
+	font-family: "宋体", "Microsoft YaHei", Arial, Helvetica, "Helvetica Neue", sans-serif;
+	font-size: 14px;
+	line-height: 1.42857143;
+	color: #333;
+	background-color: #fff;
+}
+input, button, select {
+	font-family: inherit;
+	font-size: inherit;
+	line-height: inherit;
+}
+ul, li {
+	list-style: none;
+}
+html, body, div, figure,ul, li, header, article, footer, nav, aside, section, h1, h2, h3, h4, h5, h6, input, select, span, dd, dl {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
 }
