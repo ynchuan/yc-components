@@ -1,4 +1,5 @@
 ;
+var instance;
 
 function Scroll(_tar) {
 	//初始化滚动区域，依次为滚动集合区域、滚动区域、滚动条、滚动槽
@@ -9,9 +10,23 @@ function Scroll(_tar) {
 	this.domslotbar = _tar.find(".scroll-bar");
 	//滚轮参数
 	this.areaPerWheelPlex = 70; //滚轮滚动360度，内容区滚动的距离
-	this.maxAreaHeight = this.domarea.height() - this.refdom.height();
-	this.maxtop = this.domslotbar.height() - this.domscrollbar.height();
-	this.barPerWheelPlex = Math.ceil(this.maxtop / Math.ceil(this.maxAreaHeight / this.areaPerWheelPlex));
+	this.addEventFlag = false;
+	this.mouseWheelEvent = (function(_this) {
+		return function(event) {
+			event = event ? event : window.event;
+			event.delta = (event.originalEvent.wheelDelta) ? event.originalEvent.wheelDelta / 120 : -(event.detail || 0) / 3; //上正下负
+			var areaoffsety = (event.delta) * _this.areaPerWheelPlex;
+			var baroffsety = event.delta * _this.barPerWheelPlex;
+			_this.scrollArea(areaoffsety); //采用marginTop，需要上正下负的值。 
+			_this.scrollBar(-baroffsety); //采用绝对定位，需要上负下正的值。
+			event.stopPropagation();
+		}
+	})(this);
+
+};
+
+Scroll.getSingleInstance = function(dom) {
+	return instance || (instance = new Scroll(dom));
 };
 /**
  * 初始化滚动条监听区域事件
@@ -19,21 +34,32 @@ function Scroll(_tar) {
  */
 Scroll.prototype.init = function() {
 	this.render();
+	this.maxAreaHeight = this.domarea.height() - this.refdom.height();
+	this.maxtop = this.domslotbar.height() - this.domscrollbar.height();
+	this.barPerWheelPlex = Math.ceil(this.maxtop / Math.ceil(this.maxAreaHeight / this.areaPerWheelPlex));
+	this.mouseWheelOff();
 	if (this.maxAreaHeight < 0) {
 		this.domscrollbar.hide();
 		this.domslotbar.hide();
 	} else {
-		this.dragBarListen();
+		this.domscrollbar.show();
+		this.domslotbar.show();
 		this.mouseWheelListen();
-		this.slotClickListen();
+		if (!this.addEventFlag) {
+			this.dragBarListen();
+			this.slotClickListen();
+			this.addEventFlag = true;
+		}
 	}
-
+	return this;
 };
 /**
  * 滚动条监听区域dom渲染，此处暂时不予添加
  * @return {[type]} [description]
  */
 Scroll.prototype.render = function() {
+	this.domscrollbar.css("top", "0px");
+	this.domarea.css("margin-top", "0px");
 
 };
 /**
@@ -93,15 +119,10 @@ Scroll.prototype.dragBarListen = function() {
  */
 Scroll.prototype.mouseWheelListen = function() {
 	var _this = this;
-	this.target.on("mousewheel", function(event) {
-		event = event ? event : window.event;
-		event.delta = (event.originalEvent.wheelDelta) ? event.originalEvent.wheelDelta / 120 : -(event.detail || 0) / 3; //上正下负
-		var areaoffsety = (event.delta) * _this.areaPerWheelPlex;
-		var baroffsety = event.delta * _this.barPerWheelPlex;
-		_this.scrollArea(areaoffsety); //采用marginTop，需要上正下负的值。 
-		_this.scrollBar(-baroffsety); //采用绝对定位，需要上负下正的值。
-		event.stopPropagation();
-	});
+	this.target.on("mousewheel", this.mouseWheelEvent);
+};
+Scroll.prototype.mouseWheelOff = function() {
+	this.target.off("mousewheel", this.mouseWheelEvent);
 };
 /**
  * 初始化滚动条滚动槽点击事件
@@ -111,7 +132,7 @@ Scroll.prototype.slotClickListen = function() {
 	var _this = this;
 	this.domslotbar.on("mousedown", function(event) {
 		var ev = event || window.event;
-		var dompos = _this.domscrollbar.position();
+		var dompos = _this.domscrollbar.offset();
 		var disy = ev.clientY - dompos.top - _this.domscrollbar.height() / 2;
 		_this.scrollBar(disy);
 		_this.dragScrollArea(-disy);

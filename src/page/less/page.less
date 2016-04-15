@@ -1,0 +1,49 @@
+@import (reference) "../../_assets/less/base.less";
+
+/**
+ * 分页
+ */
+.page {
+	*margin-top: 30px;
+	*margin-bottom: 30px;
+
+	.page-index {
+		width: 25px;
+		line-height: 25px;
+		.fs(12px);
+		.p(3px 7px);
+		.poi;
+		.ff;
+		.m(0 2px);
+		user-select: none;
+	}
+	.page-up, .page-down, .page-first, .page-end {
+		width: 14px;
+		height: 14px;
+		.inline-block;
+		.ml(10px);
+		.p(0);
+		vertical-align: -2px;
+		*vertical-align: 2px;
+	}
+	.page-up {
+		.bgimg("../images/btn_up.png", 0 0);
+		.ie6filter("images/btn_up.png");
+	}
+	.page-down {
+		.bgimg("../images/btn_next.png", 0 0);
+		.ie6filter("images/btn_next.png");
+	}
+	.page-first {
+		.bgimg("../images/btn_first.png", 0 0);
+		.ie6filter("images/btn_first.png");
+	}
+	.page-end {
+		.bgimg("../images/btn_end.png", 0 0);
+		.ie6filter("images/btn_end.png");
+	}
+	.cur-index {
+		.bgcolor(#3A9ACD);
+		.color;
+	}
+}

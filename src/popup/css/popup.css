@@ -1,0 +1,14 @@
+.popup-main {
+  display: none;
+  position: absolute;
+  z-index: 999;
+  min-width: 600px;
+  min-height: 300px;
+  top: 100px;
+  left: 50%;
+  margin-left: -300px;
+  background-color: #ffffff;
+}
+.popup-main .hide {
+  display: none;
+}

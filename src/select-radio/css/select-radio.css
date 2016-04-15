@@ -1,0 +1,99 @@
+/**
+ * 重写select组件  IE7+
+ */
+.default-reset-select {
+  width: 75px;
+  position: absolute;
+  z-index: 99;
+  background-color: #ffffff;
+  font-size: 14px;
+}
+.default-reset-select .thriangle-down {
+  width: 0;
+  height: 0;
+  border-width: 5px;
+  border-color: #cccccc transparent transparent transparent;
+  vertical-align: middle;
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  display: block;
+  float: right;
+  cursor: pointer;
+  border-width: 6px;
+  margin-top: 8px;
+  border-style: solid dashed dotted dashed;
+}
+.default-reset-select .triangle-up {
+  width: 0;
+  height: 0;
+  border-width: 5px;
+  border-style: dotted dashed solid dashed;
+  border-color: transparent transparent #cccccc;
+  font-family: 'Microsoft Yahei';
+  vertical-align: middle;
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+}
+.default-reset-select .reset-select-show {
+  border: 1px solid #cccccc;
+  padding: 1px 5px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  background-color: #ffffff;
+}
+.default-reset-select .reset-select-ul {
+  border: 1px solid #cccccc;
+  border-top: 1px solid transparent;
+  display: none;
+  background-color: #ffffff;
+  position: relative;
+  z-index: 4;
+}
+.default-reset-select .reset-select-ul .active {
+  background-color: #2193f0;
+  color: #ffffff;
+}
+.default-reset-select .reset-select-li {
+  padding: 1px 5px;
+  cursor: pointer;
+}
+.default-reset-select .reset-select-ul:hover {
+  outline: 1px solid #7A9CD3;
+}
+.default-reset-select .reset-select-ul:hover .active {
+  background-color: transparent;
+  color: #000000;
+}
+.default-reset-select .reset-select-ul .reset-select-li:hover {
+  background-color: #2193f0;
+  color: #ffffff;
+}
+/**
+ * 重写radio组件，支持ie9+
+ */
+.reset-radio {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: green;
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+}
+.reset-radio input[type="radio"] {
+  opacity: 0;
+}
+.reset-radio input[type="radio"]:checked + span {
+  display: block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -3px 0 0 -3px;
+}

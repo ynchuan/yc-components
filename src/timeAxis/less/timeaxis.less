@@ -1,0 +1,120 @@
+@import (reference) "../../_assets/less/base.less";
+
+/**
+ *time axis  IE7+
+ */
+.time-axis {
+	.pt(20px);
+	width: 200px;
+	.ff;
+	.fs(14px);
+	.pv;
+	.color(#AEAEAE);
+
+	.tl-year {
+		padding-top: 0px;
+	}
+	.time {
+		width: 60%;
+		.tr;
+		.inline-block;
+		.fw;
+		.poi;
+	}
+	.icon {
+		.inline-block;
+		width: 38px;
+		height: 38px;
+		vertical-align: -15px;
+		.poi;
+		zoom: 1;
+	}
+	.icon:hover+.toast {
+		.opacity(1);
+	}
+	.toast {
+		.opacity;
+		position: absolute;
+		left: 90%;
+		width: 400px;
+		border: 1px solid #003385;
+		height: 80px;
+		border-radius: 6px;
+		top: -2px;
+		z-index: 999;
+	}
+	.toast:before {
+		content: "";
+		.triangle-left(#003385);
+		position: absolute;
+		top: 10px;
+		left: -20px;
+		border-width: 10px;
+	}
+	.tl-year {
+		margin-bottom: 20px;
+
+		.time {
+			.fs(18px);
+			.color(#000);
+		}
+		.icon {
+			height: 38px;
+			vertical-align: -12px;
+			.bgimgs("../images/y-clocks.png", center center);
+		}
+	}
+	.tl-month {
+		.triangle-down {
+			vertical-align: -3px;
+		}
+		.time {
+			.fs(16px);
+			.color(#000);
+			font-weight: lighter;
+		}
+		.icon {
+			.bgimg("../images/m-clocks.png", center center);
+		}
+	}
+	.tl-day {
+		.icon {
+			.bgimgs("../images/points.png", center center);
+			*margin-left: -5px;
+		}
+	}
+	.time-line {
+		.pa;
+		height: 100%;
+		top: 0;
+		left: 68%;
+		border-left: 1px solid #354751;
+		z-index: -1;
+		*margin-left: -4px;
+	}
+	.triangle-down {
+		.triangle-down;
+		display: inline-block;
+	}
+	.rote180 {
+		transform: rotate(180deg);
+		.trans;
+	}
+	.tli {
+		.pv;
+		zoom: 1;
+	}
+}
+* + html {
+	.time-axis {
+		.triangle-left {
+			.pa;
+			top: 10px;
+			width: 11px;
+			height: 21px;
+			left: -10px;
+			.bgimg("../images/icon/trangle.gif", 0 0);
+			.bgcolor(red);
+		}
+	}
+}

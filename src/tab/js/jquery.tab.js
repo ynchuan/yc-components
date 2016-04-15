@@ -1,42 +1,32 @@
-/**
- $(".grp_tab_1").tab();
- * tab页界面创建:只是进行事件的封装，并未进行界面dom的创建
- */
-;
 (function($) {
 	$.fn.tab = function(options) {
-		var ops = $.extend({
-
-		}, options);
-		var $this = $(this);
-		var tab = new Tab($this, ops);
+		var opts = $.extend({
+				tar: $(this)
+			},
+			options);
+		var tab = new TabV2(opts);
 		tab.init();
-		tab.addTabItemListener();
 	}
 
-	function Tab($this, opts) {
-		this.target = $this;
+	function TabV2(opts) {
+		this.tar = opts.tar;
 		this.opts = opts;
 	}
-	Tab.prototype = {
-		addTabItemListener: function() {
-			this.target.on("click", ".yc_tab_li", function(event) {
-				$this=$(this);
-				var index=$this.parent().children().index($this);
-				$this.siblings('.yc_tab_li').removeClass('active');
-				var relateTabs = $this.addClass('active').parents(".yc_tab_h").siblings('.yc_tab_container');
-				relateTabs.addClass('yc_tab_hide');
-				relateTabs.eq(index).removeClass('yc_tab_hide');
-				relateTabs = null;
-				event.preventDefault();
-			});
-		},
-		init: function() {
+	TabV2.prototype.init = function() {
+		this.addToggleListener();
+	}
+	TabV2.prototype.addToggleListener = function() {
+		this.tar.on("click", this.opts.proxy || ".yc-tab-title", function(e) {
+			var _this = $(this);
+			var index = _this.index();
+			_this.siblings().removeClass("active");
+			_this.addClass("active").parent().siblings().children().addClass("yc-tab-hide").eq(index).removeClass("yc-tab-hide");
+		})
+	}
+})($);
 
-		},
-		createDom: function() {
-			var domStr = "";
-			return domStr;
-		}
-	};
-})(jQuery);
+$(function() {
+	$(".yc-tab-v2").tabV2({
+		proxy: ".yc-vertab-title,.yc-tab-title"
+	});
+})

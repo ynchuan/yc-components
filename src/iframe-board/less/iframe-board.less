@@ -1,0 +1,310 @@
+@import (reference) "../../_assets/less/base.less";
+
+body {
+	*overflow: auto;
+	*width: 100%;
+	*height: 100%;
+}
+.header {
+	.ff;
+	.bgcolor(#0283BA);
+
+	.wrap {
+		.bgimg("../images/sx/top_bg.png", 0 0);
+	}
+	.div-header-title {
+		width: 505px;
+		height: 80px;
+		.fl;
+		.ml(65px);
+		.bgimg("../images/sx/name.png", 0 0);
+		.ie6filter("images/sx/name.png");
+	}
+	.div-header-body {
+		.tr;
+		line-height: 36px;
+		.fs(0);
+		height: 80px;
+	}
+	.a-link {
+		color: #fff;
+		.inline-block;
+		.tc;
+		width: 340px/4;
+		.fs(14px);
+		.pt(8px);
+	}
+	.a-link:hover {
+		.bgcolor(rgba(255, 255, 255, .4));
+	}
+	.icon-qbk {
+		.bgimg("../images/icon_top_01.png", 0 0);
+		.ie6filter("images/icon_top_01.png");
+	}
+	.icon-help {
+		.bgimg("../images/icon_top_03.png", 0 0);
+		.ie6filter("images/icon_top_03.png");
+	}
+	.icon-mdf {
+		.bgimg("../images/icon_top_05.png", 0 0);
+		.ie6filter("images/icon_top_05.png");
+	}
+	.icon-exit {
+		.bgimg("../images/icon_top_07.png", 0 0);
+		.ie6filter("images/icon_top_07.png");
+	}
+	.icon {
+		width: 32px;
+		height: 32px;
+		.inline-block;
+		.vm;
+		*vertical-align: -10px;
+	}
+}
+.section-tips {
+	.div-time-usr {
+		line-height: 35px;
+		.ff;
+	}
+	.div-time {
+		.fl;
+		.fs(12px);
+		width: 200px;
+		.color;
+		.bgcolor(#1F85B8);
+		.tc;
+		background-image: linear-gradient(top, #208BC0, #208BC0);
+		.bgcolor(#208BC0);
+		box-shadow: 0px 4px 3px #208BC0;
+	}
+	.div-wel-usr {
+		.bfc;
+		.fs(15px);
+		.ff("宋体");
+		.fw();
+		color: #0C73A4;
+		.pl(30px);
+		.bgimg("../images/sx/column_bg.png", 0 0);
+		background-repeat: repeat-x;
+		box-shadow: 0px 4px 3px #E5E5E5;
+	}
+}
+.aside-collapse {
+	width: 200px;
+	.ff;
+	top: 0;
+	left: 0;
+	.pa;
+	overflow-y: auto;
+	overflow-x: hidden;
+	height: 100%;
+	.bgcolor(#0979af);
+	z-index: 3;
+	user-select: none;
+}
+.article-body {
+	.pa;
+	left: 215px;
+	top: 0;
+	right: 2px;
+	//该为页面满屏关键2
+	height: 99%;
+	*width: 1100px;
+}
+.section {
+	width: 100%;
+	.pa;
+	top: 115px;
+	left: 0;
+	bottom: 28px;
+	//该为页面满屏关键1 
+	*height: 580px;
+
+	.wrap {
+		.pv;
+		height: 100%;
+		width: 100%;
+		_width: 1366px;
+	}
+	.div-bread {
+		.ff;
+		line-height: 40px;
+		.tl;
+		.fs(15px);
+		.pv;
+		z-index: 2;
+	}
+	.a-bread {
+		.color(#767676);
+		.pl(9px);
+		.pr(9px);
+	}
+	.a-main {
+		border-left: 8px solid #3397D2;
+	}
+	.icon-notice {
+		.bgimg("../images/gztx.png", 0 0);
+		.ie6filter("images/gztx.png");
+	}
+	.icon-manage {
+		.bgimg("../images/wxys.png", 0 0);
+		.ie6filter("images/wxys.png");
+	}
+	.icon-alarmManage {
+		.bgimg("../images/gzry.png", 0 0);
+		.ie6filter("images/gzry.png");
+	}
+	.icon-configure {
+		.bgimg("../images/lsqy.png", 0 0);
+		.ie6filter("images/lsqy.png");
+	}
+	.icon-statistic {
+		.bgimg("../images/dbbj.png", 0 0);
+		.ie6filter("images/dbbj.png");
+	}
+	.icon-sys-manage {
+		.bgimg("../images/zcdj.png", 0 0);
+		.ie6filter("images/zcdj.png");
+	}
+	.icon-djxz {
+		.bgimg("../images/djxz.png", 0 0);
+		.ie6filter("images/djxz.png");
+	}
+	.icon-fkqb {
+		.bgimg("../images/fkqb.png", 0 0);
+		.ie6filter("images/fkqb.png");
+	}
+	.icon-ffgk {
+		.bgimg("../images/ffgk.png", 0 0);
+		.ie6filter("images/ffgk.png");
+	}
+	.icon-zhdd {
+		.bgimg("../images/zhdd.png", 0 0);
+		.ie6filter("images/zhdd.png");
+	}
+	.icon-fkzd {
+		.bgimg("../images/fkzd.png", 0 0);
+		.ie6filter("images/fkzd.png");
+	}
+	.icon-sscx {
+		.bgimg("../images/sscx.png", 0 0);
+		.ie6filter("images/sscx.png");
+	}
+	.icon-bkgl {
+		.bgimg("../images/bkgl.png", 0 0);
+		.ie6filter("images/bkgl.png");
+	}
+	.active {
+		.icon-notice {
+			.bgimg("../images/gztx_ed.png", 0 0);
+			.ie6filter("images/gztx_ed.png");
+		}
+		.icon-manage {
+			.bgimg("../images/wxys_ed.png", 0 0);
+			.ie6filter("images/wxys_ed.png");
+		}
+		.icon-alarmManage {
+			.bgimg("../images/gzry_ed.png", 0 0);
+			.ie6filter("images/gzry_ed.png");
+		}
+		.icon-configure {
+			.bgimg("../images/lsqy_ed.png", 0 0);
+			.ie6filter("images/lsqy_ed.png");
+		}
+		.icon-statistic {
+			.bgimg("../images/dbbj_ed.png", 0 0);
+			.ie6filter("images/dbbj_ed.png");
+		}
+		.icon-sys-manage {
+			.bgimg("../images/zcdj_ed.png", 0 0);
+			.ie6filter("images/zcdj_ed.png");
+		}
+		.icon-djxz {
+			.bgimg("../images/djxz_ed.png", 0 0);
+			.ie6filter("images/djxz_ed.png");
+		}
+		.icon-fkqb {
+			.bgimg("../images/fkqb_ed.png", 0 0);
+			.ie6filter("images/fkqb_ed.png");
+		}
+		.icon-ffgk {
+			.bgimg("../images/ffgk_ed.png", 0 0);
+			.ie6filter("images/ffgk_ed.png");
+		}
+		.icon-zhdd {
+			.bgimg("../images/zhdd_ed.png", 0 0);
+			.ie6filter("images/zhdd_ed.png");
+		}
+		.icon-fkzd {
+			.bgimg("../images/fkzd_ed.png", 0 0);
+			.ie6filter("images/fkzd_ed.png");
+		}
+		.icon-sscx {
+			.bgimg("../images/sscx_ed.png", 0 0);
+			.ie6filter("images/sscx_ed.png");
+		}
+		.icon-bkgl {
+			.bgimg("../images/bkgl_ed.png", 0 0);
+			.ie6filter("images/bkgl_ed.png");
+		}
+	}
+	.h1-main-title {
+		.fs(16px);
+		color: #626262;
+		.fw(lighter);
+		line-height: 45px;
+		.pl(38px);
+		.bgcolor(#F7F7F7);
+	}
+}
+.div-main {
+	width: 100%;
+	height: 100%;
+	*height: 98%;
+	.mt(-40px);
+	.pt(40px);
+	zoom: 1;
+
+	.iframe {
+		width: 100%;
+		height: 100%;
+	}
+}
+.footer {
+	line-height: 28px;
+	.fs(12px);
+	.tc;
+	.color;
+	.bgcolor(#0979AF);
+	.pa;
+	width: 100%;
+	bottom: 0;
+	left: 0;
+}
+.d-slider-l {
+	.pa;
+	width: 11px;
+	height: 80px;
+	.bgimg("../images/sx/bar-l.png", 0 0);
+	top: 50%;
+	.mt(-40px);
+	left: 198px;
+	.poi;
+}
+.d-slider-r {
+	background-image: url("../images/sx/bar-r.png");
+}
+.slide {
+	.aside-collapse {
+		.hide;
+	}
+	.article-body {
+		left: 13px;
+	}
+	.d-slider-l {
+		left: 2px;
+	}
+}
+.img-welcome {
+	width: 100%;
+}

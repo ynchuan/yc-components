@@ -1,0 +1,51 @@
+/**
+ * list
+ */
+.yc_list {
+  width: 100%;
+  line-height: 30px;
+  text-align: center;
+  font-size: 13px;
+  margin-top: 15px;
+}
+.yc_list .yc-li-head .yc-list-cell {
+  background-color: #4292d6;
+  color: #fff;
+}
+.yc_list .yc-cell-num {
+  background-color: #333333;
+  color: #fff;
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  width: 25px;
+  line-height: 15px;
+  text-align: center;
+}
+.yc_list tr {
+  border-bottom: 1px solid #D8D8D8;
+}
+.yc_list tr:nth-child(odd) {
+  background-color: #f9f9f9;
+}
+.yc_list .cell-1 {
+  width: 20%;
+}
+.yc_list .cell-2 {
+  width: 20%;
+}
+.yc_list .cell-3 {
+  width: 20%;
+}
+.yc_list .cell-4 {
+  width: 40%;
+}
+.yc_list .first {
+  background-color: #fe0200;
+}
+.yc_list .second {
+  background-color: #ffaa68;
+}
+.yc_list .third {
+  background-color: #fcb304;
+}

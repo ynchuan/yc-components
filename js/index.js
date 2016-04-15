@@ -32,6 +32,9 @@ var data = [{
 		"uid": "lazyload",
 		"title": "图片懒加载"
 	}, {
+		"uid": "page",
+		"title": "分页"
+	}, {
 		"uid": "popup",
 		"title": "弹窗"
 	}, {
@@ -62,15 +65,15 @@ var data = [{
 }];
 
 $(function() {
-	$iframe=$("#iframe");
-	$linkSrc=$("#link-src");
+	$iframe = $("#iframe");
+	$linkSrc = $("#link-src");
 	$(".aside-collapse").collapse({
 		"data": data,
 		"isHidePre": true,
 		clickEvent: function(event, data) {
 			var uid = $(this).data("uid");
-			$linkSrc.removeClass('hide').attr("href","src/"+uid); 
-			$iframe.attr("src", "src/" +uid+"/"+ uid + ".html?v="+(+new Date));
+			$linkSrc.removeClass('hide').attr("href", "src/" + uid);
+			$iframe.attr("src", "src/" + uid + "/" + uid + ".html?v=" + (+new Date));
 			iframe.onload = function() {
 				//iframe页面加载后执行onload方法
 				// window.ifw = iframe.contentWindow;

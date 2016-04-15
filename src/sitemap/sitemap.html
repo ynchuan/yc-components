@@ -1,48 +1,32 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<title>信息资源平台文件结构图</title>
-	<meta charset='utf-8'/>
-	<script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
-	<script type="text/javascript" src="js/infosrcdata.js"></script>
-	<script type="text/javascript" src="js/jquery.sitemap.js"></script>
-	<style type="text/css">
-
-	.rc{
-		text-decoration: none;
-		display:inline-block;
-		border:1px solid #ccc;
-		color:#000;
-		padding:0.5em;
-		border-radius:3px;
-	}
-	.ic{
-		display:inline-block;
-		height:1em;
-		width:1em;
-		background: url(images/ui-icons_2e83ff_256x240.png) no-repeat -45px -125px ;
-	}
-	/*.rc:link{
-		color:yellow;
-	}
-	.rc:hover{
-		color:red;
-	}
-	.rc:visited{
-		color:green;
-	}*/
-	/*.r1{background-color: red}
-	.r2{background-color: green}
-	.r3{background-color: yellow}
-	.r4{background-color: blue}
-	.r5{background-color: orange}
-	.r6{background-color: purple}
-	.r7{background-color: grey}*/
-	.rs{width:2em;display: inline-block;}
-	</style>
-</head>
-<body>
-	<div id="sitediv">
-	</div>
-</body>
+	<head>
+		<title>信息资源平台文件结构图</title>
+		<meta http-equiv="Content-Type"content="text/html; charset=utf-8"/>
+		<meta http-equiv="X-UA-Compatible"content="IE=edge"/>
+		<meta name="renderer"content="webkit">
+		<link rel="stylesheet" href="css/demo.css">
+		<script type="text/javascript"src="../_assets/js/jquery-1.7.2.min.js"></script>
+		<link rel="stylesheet"href="css/sitemap.css">
+		<script type="text/javascript"src="js/infosrcdata.js"></script>
+		<script type="text/javascript"src="js/jquery.sitemap.js"></script>
+		<script>
+		$(function() {
+			$("#sitediv").siteMap({
+				data: src
+			})
+			});
+		</script>
+	</head>
+	<body>
+		<h2 class="h2-dm">树形结构</h2>
+		<div class="div-show">
+			<div id="sitediv">
+			</div>
+		</div>
+		<div class="div-desc">
+		</div>
+		<div class="d-code">
+		</div>
+	</body>
 </html>

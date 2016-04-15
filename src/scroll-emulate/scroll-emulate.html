@@ -5,65 +5,24 @@
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="renderer" content="webkit">
-		<link rel="stylesheet"href="css/normalize.css">
-		<link rel="stylesheet"href="css/common.css">
-		<script type="text/javascript"src="js/page.js"></script>
-		<script type="text/javascript"src="js/scroll-emulate.js"></script>
+		<link rel="stylesheet" href="css/demo.css">
+		<script type="text/javascript" src="../_assets/js/jquery-1.7.2.min.js"></script>
+		<link rel="stylesheet" href="css/scroll-emulate.css">
+		<script src="js/scroll-emulate-jq.js"></script>
 		<script type="text/javascript">
-			window.addEventListener("DOMContentLoaded", function() {
-				new Page({
-					"container": document.getElementById("coll-div")
-					}).init();
-				new Scroll(document.querySelectorAll(".scroll-emulate").item(0)).init();
+			$(function(){
+				Scroll.getSingleInstance($(".scroll-emulate")).init();
 			});
 		</script>
-		<style type="text/css">
-			.intro{
-				width: 50%;
-				margin:0 auto;
-				float:left;
-				margin-left:20px;
-				-webkit-user-select:none;
-			}
-			.demo{
-				overflow: hidden;
-				margin-right:20px;
-				-webkit-user-select:none;
-			}
+		<style type="text/css"> 
 			.scroll-emulate{
 				border:1px solid #ccc;
 			}
 		</style>
 	</head>
 	<body>
-		<div class="intro">
-			<h3>模拟对象：百度地图收藏滚动列表以及分页，用于仿站</h3>
-			<br>
-			<img src="pic/scroll-page.png" height="350px">
-			<div class="scroll">
-				<h3>滚动条模拟</h3>
-				<p class="p">
-					滚动条模拟百度地图中收藏的滚动条进行编码<br>
-					使用方式：<br>
-					new Scroll(document.querySelectorAll(".scroll-emulate").item(0)).init();
-					<br>
-				</p>
-			</div>
-			<div class="scroll">
-				<h3>分页</h3>
-				<p class="p">
-					分页模拟百度地图收藏中的分页设计风格编码，效果见滚动条的最后一行<br>
-					使用方式：<br>
-					new Page({
-					"container": document.getElementById("coll-div")
-					}).init();<br>
-					container为定义的盒子
-				</p>
-			</div>
-		</div>
-		<div class="demo">
-			<h3>效果演示：</h3>
-			<br>
+		<h2 class="h2-dm">模拟滚动条</h2>
+		<div class="div-show">
 			<div class="scroll-emulate">
 				<div class="scroll-emulate-area">
 					<ul class="s-coll-ul-sub">
@@ -177,8 +136,11 @@
 				</div>
 			</div>
 		</div>
-		<br>
-		<br>
-		<br>
+		<div class="div-desc">
+			
+		</div>
+		<div class="d-code">
+			
+		</div>
 	</body>
 </html>

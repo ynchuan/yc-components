@@ -1,0 +1,66 @@
+/**
+ * 分页
+ */
+.page {
+  *margin-top: 30px;
+  *margin-bottom: 30px;
+}
+.page .page-index {
+  width: 25px;
+  line-height: 25px;
+  font-size: 12px;
+  padding: 3px 7px;
+  cursor: pointer;
+  font-family: 'Microsoft Yahei';
+  margin: 0 2px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+.page .page-up,
+.page .page-down,
+.page .page-first,
+.page .page-end {
+  width: 14px;
+  height: 14px;
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  margin-left: 10px;
+  padding: 0;
+  vertical-align: -2px;
+  *vertical-align: 2px;
+}
+.page .page-up {
+  background-image: url("../images/btn_up.png");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  _background: none;
+  _filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="images/btn_up.png", sizingMethod='crop');
+}
+.page .page-down {
+  background-image: url("../images/btn_next.png");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  _background: none;
+  _filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="images/btn_next.png", sizingMethod='crop');
+}
+.page .page-first {
+  background-image: url("../images/btn_first.png");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  _background: none;
+  _filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="images/btn_first.png", sizingMethod='crop');
+}
+.page .page-end {
+  background-image: url("../images/btn_end.png");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  _background: none;
+  _filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="images/btn_end.png", sizingMethod='crop');
+}
+.page .cur-index {
+  background-color: #3a9acd;
+  color: #ffffff;
+}
