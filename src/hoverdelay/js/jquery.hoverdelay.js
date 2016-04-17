@@ -15,13 +15,13 @@
         return $(this).each(function() {
             $(this).hover(function(event) {
                 var that = this;
-                clearTimeout(outTimer);
+                outTimer&&clearTimeout(outTimer);
                 hoverTimer = setTimeout(function() {
                     sets.hoverEvent.call(that);
                 }, sets.hoverDuring);
             }, function(event) {
                 var that = this;
-                clearTimeout(hoverTimer);
+                hoverTimer&&clearTimeout(hoverTimer);
                 outTimer = setTimeout(function() {
                     sets.outEvent.call(that);
                 }, sets.outDuring);

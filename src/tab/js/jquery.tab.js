@@ -20,13 +20,7 @@
 			var _this = $(this);
 			var index = _this.index();
 			_this.siblings().removeClass("active");
-			_this.addClass("active").parent().siblings().children().addClass("yc-tab-hide").eq(index).removeClass("yc-tab-hide");
+			_this.addClass("active").parent().siblings().addClass("yc-tab-hide").eq(index).removeClass("yc-tab-hide");
 		})
 	}
 })($);
-
-$(function() {
-	$(".yc-tab-v2").tabV2({
-		proxy: ".yc-vertab-title,.yc-tab-title"
-	});
-})

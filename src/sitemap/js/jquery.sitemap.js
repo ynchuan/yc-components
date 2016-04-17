@@ -47,7 +47,7 @@
             for (var i = 0; i < n; i++) {
                 space += "<span class=rs></span>"
             }
-            var tmpStr = "<div class=div_r" + n + " data-leval=" + n + ">";
+            var tmpStr = "<div class=div_r div_r" + n + " data-leval=" + n + ">";
             tmpStr += space + "<span class=ic data-id=" + (n + 1) + "></span><a class=\'rc " + childObj["class"] + "\' href=" + childObj["url"] + " target=_blank>" + n + ":" + childObj["title"] + "&nbsp;" + this.count + "</a>";
             tmpStr += "</div>";
             this.count++;
@@ -60,7 +60,7 @@
                 "display": "block",
             });
             $d.find('.ic').css({
-                "background-position": "-45px -125px"
+                "background-position": "-48px -129px"
             });
         },
         hideOut: function($d) {
@@ -75,7 +75,7 @@
                 });
 
             $d.find('.ic').css({
-                "background-position": "-15px -125px"
+                "background-position": "-16px -129px"
             });
         },
         toggleIO: function($d) {

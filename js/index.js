@@ -54,17 +54,21 @@ var data = [{
 		"title": "滑动选择"
 	}, {
 		"uid": "tab",
-		"title": "TAB页"
+		"title": "tab页"
 	}, {
 		"uid": "table",
 		"title": "表格"
 	}, {
 		"uid": "timeAxis",
 		"title": "时间轴"
+	}, {
+		"uid": "tipbox",
+		"title": "提示框"
 	}]
 }];
 
 $(function() {
+	var initclps=window.location.search.replace(/\?/g,"")||"components";
 	$iframe = $("#iframe");
 	$linkSrc = $("#link-src");
 	$(".aside-collapse").collapse({
@@ -83,5 +87,5 @@ $(function() {
 				// 
 			}
 		}
-	}).collapse("components");
+	}).collapse(initclps);
 });

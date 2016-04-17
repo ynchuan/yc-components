@@ -442,7 +442,7 @@ dl {
   line-height: 80px;
   font-family: 'Microsoft Yahei';
   font-weight: lighter;
-  padding-left: 5px;
+  padding-left: 10px;
 }
 .d-aside {
   width: 180px;
@@ -478,19 +478,22 @@ dl {
 .div-bread .a-link:hover {
   color: #1E5977;
 }
+.aside-collapse {
+  font-family: 'Microsoft Yahei';
+}
 /**
  *collapse style
  */
 .grp_collpase_ul {
   line-height: 40px;
-  font-size: 18px;
+  font-size: 17px;
 }
 .grp_collpase_ul .li-parent {
-  padding-left: 5px;
+  padding-left: 10px;
 }
 .grp_collpase_ul .li-sub {
   line-height: 35px;
-  font-size: 15px;
+  font-size: 14px;
   padding-left: 20px;
 }
 .grp_collpase_ul .grp_collpase_item {

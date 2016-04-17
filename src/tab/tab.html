@@ -7,11 +7,13 @@
 		<meta name="renderer"content="webkit">
 		<link rel="stylesheet" href="css/demo.css">
 		<script type="text/javascript" src="../_assets/js/jquery-1.7.2.min.js"></script>
-		<link rel="stylesheet" href="css/slidebar.css">
+		<link rel="stylesheet" href="css/tab.css">
 		<script type="text/javascript" src="js/jquery.tab.js"></script>
 		<script>
-		$(function(){
-			$(".grp_tab_1").tab();
+		$(function() {
+			$(".grp_tab_1").tab({
+				proxy: ".yc_tab_li"
+			});
 		})
 		</script>
 	</head>
@@ -19,24 +21,22 @@
 		<h2 class="h2-dm">tab切换页</h2>
 		<div class="div-show">
 			<div class="grp_tab_1">
-				<div class="yc_tab_h">
-					<ul class="yc_tab_ul">
-						<li class="yc_tab_li active">
-							<span class="hosticon icon">人员布控</span>
-						</li>
-						<li class="yc_tab_li">
-							<span class="dataicon icon">车辆布控</span>
-						</li>
-						<li class="yc_tab_li">
-							<span class="servicon icon">手机布控</span>
-						</li>
-					</ul>
-				</div>
+				<ul class="yc_tab_ul">
+					<li class="yc_tab_li active">
+						<span class="hosticon icon">人员布控</span>
+					</li>
+					<li class="yc_tab_li">
+						<span class="dataicon icon">车辆布控</span>
+					</li>
+					<li class="yc_tab_li">
+						<span class="servicon icon">手机布控</span>
+					</li>
+				</ul>
 				<div class="yc_tab_container">
 					tab1
 				</div>
-				<div class="yc_tab_container yc_tab_hide">tab2</div>
-				<div class="yc_tab_container yc_tab_hide">tab3</div>
+				<div class="yc_tab_container yc-tab-hide">tab2</div>
+				<div class="yc_tab_container yc-tab-hide">tab3</div>
 			</div>
 		</div>
 		<div class="div-desc">

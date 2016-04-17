@@ -4,7 +4,7 @@ var instance;
 function Scroll(_tar) {
 	//初始化滚动区域，依次为滚动集合区域、滚动区域、滚动条、滚动槽
 	this.target = _tar;
-	this.domarea = _tar.find(".scroll-contain-body");
+	this.domarea = _tar.find(".scroll-emulate-area");
 	this.refdom = this.domarea.parent();
 	this.domscrollbar = _tar.find(".scroll-bg");
 	this.domslotbar = _tar.find(".scroll-bar");
@@ -19,7 +19,8 @@ function Scroll(_tar) {
 			var baroffsety = event.delta * _this.barPerWheelPlex;
 			_this.scrollArea(areaoffsety); //采用marginTop，需要上正下负的值。 
 			_this.scrollBar(-baroffsety); //采用绝对定位，需要上负下正的值。
-			event.stopPropagation();
+			// event.stopPropagation();
+			event.preventDefault();
 		}
 	})(this);
 

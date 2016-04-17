@@ -21,10 +21,11 @@
   display: inline-block;
   *display: inline;
   *zoom: 1;
+  border: 1px solid #eeeeee;
 }
 .downlist-menu .ul-down {
   margin-top: 12px;
-  box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 4px;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 4px 3px;
   background-color: #ffffff;
   padding-left: 10px;
   font-size: 13px;
@@ -45,4 +46,10 @@
   top: -3px;
   border-width: 8px;
   line-height: 0px;
+}
+.downlist-menu .a-menu-l {
+  color: #333333;
+}
+.downlist-menu .a-menu-l:hover {
+  color: #cccccc;
 }

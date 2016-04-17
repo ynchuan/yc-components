@@ -59,7 +59,9 @@
                  });
              }
          }
-     }
-     init('img');
+     } 
+     addEvent(window, 'DOMContentLoaded', function(){
+        init('img');
+     });
      addEvent(window, 'scroll', lazyLoad);
  })()

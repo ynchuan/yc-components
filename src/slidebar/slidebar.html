@@ -9,15 +9,16 @@
 		<script type="text/javascript" src="../_assets/js/jquery-1.7.2.min.js"></script>
 		<link rel="stylesheet" href="css/slidebar.css">
 		<script src="js/slidebar-jq.js"></script>
-		<script>
-		$(".slidebar").slide( {
+		 <script type="text/javascript">
+		 $(function(){
+		 	$(".slidebar").slide( {
 			callback:function(left, right) {
 				console.log("年龄起始："+left);
 				console.log("年龄结束："+right);
 			}
-		}
-		);
-		</script>
+		});
+		 })
+		 </script>
 	</head>
 	<body>
 		<h2 class="h2-dm">滑动选择</h2>

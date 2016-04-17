@@ -9,6 +9,14 @@
 }
 .scroll-emulate .scroll-emulate-area {
   margin-right: 15px;
+  line-height: 25px;
+  font-size: 13px;
+  margin-left: 15px;
+}
+.scroll-emulate .s-coll-ul-sub {
+  border-bottom: 1px solid #eeeeee;
+  padding-bottom: 5px;
+  padding-top: 5px;
 }
 .scroll-emulate .scroll-bar {
   position: absolute;

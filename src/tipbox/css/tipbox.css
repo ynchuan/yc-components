@@ -1,9 +1,12 @@
-.cdtn_grp {
-  border: 1px solid #dadada;
+.d-tipbox {
+  position: relative;
+  width: 300px;
 }
 .cdtn_num {
   padding: 1em;
   border-bottom: 2px dashed #A1A1A1;
+  position: relative;
+  cursor: pointer;
 }
 .cdtn_abst {
   float: right;

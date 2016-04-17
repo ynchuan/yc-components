@@ -10,17 +10,25 @@
 		<link rel="stylesheet" href="css/tipbox.css">
 		<script src="js/jquery.tipbox.js"></script>
 		<script>
-			$(function(){
-				$(".cdtn_num").tipbox({
+		$(function() {
+			$(".cdtn_num").hover(function() {
+				$(this).tipbox({
 					msg: "123"
-				})
+				});
+			}, function() {
+				$(this).tipbox("close");
 			});
+		});
 		</script>
 	</head>
 	<body>
 		<h2 class="h2-dm">提示框</h2>
 		<div class="div-show">
-			<h4 class="cdtn_num" style="position: relative;"><span class="cdtn_abst">已经添加条件:入住时间|人员性别|网吧名称|所属辖区|人员名称</span> 条件组1</h4>
+			<div class="d-tipbox">
+				<h4 class="cdtn_num">
+					<span class="cdtn_abst">已经添加条件:****人员</span> 条件组1
+				</h4>
+			</div>
 		</div>
 		<div class="div-desc">
 		</div>

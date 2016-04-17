@@ -2,7 +2,7 @@
  * 模拟滑动条
  */
 .slidebar-emulate {
-  height: 6px;
+  height: 7px;
   width: 100%;
   cursor: pointer;
   background-color: #9aa4ad;
@@ -109,9 +109,12 @@
           user-select: none;
   *width: 560px;
   position: absolute;
+  padding-left: 10px;
 }
 .slidebar .slidetxt {
   margin-top: 10px;
+  overflow: hidden;
+  *zoom: 1;
 }
 .slidebar .slidetxt .slideage {
   width: 70px;

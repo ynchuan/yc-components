@@ -71,6 +71,7 @@
   *display: inline;
   *zoom: 1;
   cursor: pointer;
+  display: none;
 }
 .date-pannel .ul-date-list {
   position: absolute;
@@ -94,6 +95,7 @@
   *display: inline;
   *zoom: 1;
   cursor: pointer;
+  display: none;
 }
 .date-pannel .icon-left {
   border-right: 6px solid #ccc;
