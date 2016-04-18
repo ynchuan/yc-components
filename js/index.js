@@ -68,7 +68,7 @@ var data = [{
 }];
 
 $(function() {
-	var initclps=window.location.search.replace(/\?/g,"")||"components";
+	var initclps = window.location.search.replace(/\?/g, "") || "components";
 	$iframe = $("#iframe");
 	$linkSrc = $("#link-src");
 	$(".aside-collapse").collapse({
@@ -76,7 +76,7 @@ $(function() {
 		"isHidePre": true,
 		clickEvent: function(event, data) {
 			var uid = $(this).data("uid");
-			$linkSrc.removeClass('hide').attr("href", "src/" + uid);
+			$linkSrc.removeClass('hide').attr("href", "https://github.com/ynchuan/yc-components/tree/master/src/" + uid);
 			$iframe.attr("src", "src/" + uid + "/" + uid + ".html?v=" + (+new Date));
 			iframe.onload = function() {
 				//iframe页面加载后执行onload方法
