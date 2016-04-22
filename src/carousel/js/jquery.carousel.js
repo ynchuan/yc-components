@@ -57,7 +57,7 @@
 					} else if (_this.currentItem <= 1) {
 						_this.reachflag = false;
 					}
-					var marleft =(_this.currentItem-1) * _this.opts.itemWidth;
+					var marleft = (_this.currentItem - 1) * _this.opts.itemWidth;
 					_this.target.find('.grp_carousel_imgcoll').css({
 						"margin-left": "-" + marleft + "px"
 					});
@@ -67,7 +67,7 @@
 			})(this), this.opts.interval);
 		},
 		locationItem: function() {
-			var marleft = (this.currentItem-1) * this.opts.itemWidth;
+			var marleft = (this.currentItem - 1) * this.opts.itemWidth;
 			this.target.find('.grp_carousel_imgcoll').css({
 				"margin-left": "-" + marleft + "px"
 			});
@@ -78,7 +78,7 @@
 			this.currentItem++;
 			this.autoRollTimer && clearInterval(this.autoRollTimer);
 			if (this.currentItem >= this.num) {
-				this.currentItem = this.num ;
+				this.currentItem = this.num;
 				this.reachflag = true;
 			}
 			// console.log("next=" + this.currentItem);
@@ -88,7 +88,7 @@
 		prev: function() {
 			this.currentItem--;
 			this.autoRollTimer && clearInterval(this.autoRollTimer);
-			if (this.currentItem <=1) {
+			if (this.currentItem <= 1) {
 				this.currentItem = 1;
 				this.reachflag = false;
 			}
@@ -98,11 +98,11 @@
 		},
 		setItem: function(item) {
 			this.autoRollTimer && clearInterval(this.autoRollTimer);
-			if (item <=1) {
+			if (item <= 1) {
 				item = 1;
 				this.reachflag = false;
 			} else if (item >= this.num) {
-				item = this.num ;
+				item = this.num;
 				this.reachflag = true;
 			}
 			this.currentItem = item;
@@ -110,13 +110,13 @@
 			this.autoPlay();
 		},
 		setActiveItem: function() {
-			this.target.find(".grp_carousel_link").removeClass('active').eq(this.currentItem-1).addClass('active');
+			this.target.find(".grp_carousel_link").removeClass('active').eq(this.currentItem - 1).addClass('active');
 		},
 		addlinkItemListener: function() {
 			var that = this;
 			this.target.find(".grp_carousel_link").each(function(index, el) {
 				$(this).on("click", function() {
-					that.setItem(index+1);
+					that.setItem(index + 1);
 				})
 			});
 			this.target.find(".grp_carousel_page").each(function(index, el) {

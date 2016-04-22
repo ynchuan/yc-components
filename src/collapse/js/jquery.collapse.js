@@ -20,7 +20,7 @@
 		this.dom = $this;
 		this.data = opts.data;
 		this.opts = opts;
-		this.count = 1;//控制进入此页面初始化时候第一次点击条目是否生效
+		this.count = 1; //控制进入此页面初始化时候第一次点击条目是否生效
 	};
 	collapse.prototype = {
 		createDomStrcs: function() {
@@ -32,7 +32,7 @@
 		dataiteration: function(relate, data, n) {
 			var domStr = "";
 			for (var i = 0; i < data.length; i++) {
-				var dataObj = data[i]; 
+				var dataObj = data[i];
 				var mark1 = "li-parent",
 					mark2 = "";
 				if (n == 1) {
@@ -60,7 +60,6 @@
 				var relate = selectDom.data("relate");
 				relate != "root" && this.dom.find(".grp_collpase_ul [data-uid=" + relate + "]").trigger("click"); //父级点击
 				selectDom.trigger("click"); //子级触发点击
-				relate == "root" && this.count++;
 				return;
 			} else if (typeof options == "number") {
 				var selectDom = this.dom.find(".grp_collpase_ul [data-relate=root]").eq(options);
@@ -105,6 +104,7 @@
 			}
 			this.preuid = uid;
 			this.preDom = $this;
+			this.count++;
 		},
 		subClickDeal: function($this) {
 			this.presubItem && this.presubItem.removeClass('checked');
