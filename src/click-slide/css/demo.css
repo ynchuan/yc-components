@@ -448,7 +448,8 @@ dl {
   font-size: 14px;
   text-indent: 2em;
 }
-.test-input {
-  margin-left: 500px;
-  margin-top: 200px;
+.container {
+  width: 600px;
+  border: 1px solid #eee;
+  margin: 0 auto;
 }

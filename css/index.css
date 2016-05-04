@@ -436,7 +436,7 @@ dl {
   padding: 0;
 }
 .wrap {
-  width: 1200px;
+  width: 1250px;
 }
 .h1-tt {
   line-height: 80px;
@@ -451,10 +451,14 @@ dl {
   border-right: 1px solid #eaeaea;
   border-left: 1px solid #eaeaea;
 }
+.d-main {
+  overflow: hidden;
+  *zoom: 1;
+}
 .div-main {
   position: absolute;
-  width: 1000px;
-  height: 100%;
+  width: 1050px;
+  height: 99%;
 }
 .iframe {
   width: 100%;
@@ -464,7 +468,7 @@ dl {
   position: absolute;
   z-index: 1;
   top: 20px;
-  width: 900px;
+  width: 1000px;
   text-align: right;
 }
 .div-bread .a-link {

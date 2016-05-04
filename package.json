@@ -1,0 +1,19 @@
+{
+  "name": "yc-components",
+  "version": "1.0.0",
+  "description": "components organize",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ynchuan/yc-components.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ynchuan/yc-components/issues"
+  },
+  "homepage": "https://github.com/ynchuan/yc-components#readme"
+}

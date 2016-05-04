@@ -41,7 +41,7 @@
 					mark1 = "li-sub";
 				}
 				domStr +=
-					"<li class='grp_collpase_li '><div class='grp_collpase_item " + mark1 + "' data-toggle='show'  data-relate=" + relate + " data-uid=" + dataObj.uid + " data-leval=" + n + " data-bind='" + "'>" +
+					"<li class='grp_collpase_li '><div class='grp_collpase_item " + mark1 + "' data-toggle='show'  data-relate=" + relate + " data-uid=" + dataObj.uid + " data-leval=" + n + " data-bind='"+dataObj.title+"'>" +
 					"<i class='icon-left icon-" + dataObj.uid + "'></i>" +
 					"<span class='grp_collpase_txt'>" + dataObj.title + "</span>" +
 					"<i class='" + mark2 + "' ></i>" +

@@ -451,3 +451,12 @@ dl {
 .d-select {
   padding-bottom: 20px;
 }
+.demo {
+  position: relative;
+  margin: 30px;
+  background-color: lightgreen;
+  padding: 20px;
+}
+.radio {
+  margin-right: 5px;
+}

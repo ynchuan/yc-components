@@ -448,7 +448,30 @@ dl {
   font-size: 14px;
   text-indent: 2em;
 }
-.test-input {
-  margin-left: 500px;
-  margin-top: 200px;
+.container {
+  width: 800px;
+}
+.div-content {
+  min-height: 50px;
+  border: 1px solid #ccc;
+}
+.div-h3-detail {
+  height: 50px;
+  background-color: palevioletred;
+}
+.h3-tl {
+  font-size: 16px;
+  padding-left: 10px;
+}
+.h2-tl {
+  padding-top: 20px;
+  padding-bottom: 5px;
+  margin: 0;
+}
+.d-catalog {
+  -webkit-transition: all 0.3s;
+          transition: all 0.3s;
+  position: fixed;
+  top: 150px;
+  right: 10px;
 }
