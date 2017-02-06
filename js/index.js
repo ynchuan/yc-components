@@ -64,6 +64,9 @@ var data = [{
 	}, {
 		"uid": "tipbox",
 		"title": "提示框"
+	}, {
+		"uid": "drag-item",
+		"title": "拖拽电路"
 	}]
 }];
 
